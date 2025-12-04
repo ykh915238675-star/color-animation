@@ -1,0 +1,5 @@
+{
+  "name": "Fluid Aurora",
+  "description": "A mesmerizing, animated fluid gradient background generator that uses Gemini to create color palettes based on your mood.",
+  "requestFramePermissions": []
+}

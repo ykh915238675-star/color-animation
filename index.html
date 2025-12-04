@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluid Aurora Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom Animation Utilities */
+      @keyframes blob {
+        0% {
+          transform: translate(0px, 0px) scale(1);
+        }
+        33% {
+          transform: translate(300px, -150px) scale(1.2); /* Much larger movement */
+        }
+        66% {
+          transform: translate(-250px, 200px) scale(0.8); /* Large swooping movement */
+        }
+        100% {
+          transform: translate(0px, 0px) scale(1);
+        }
+      }
+      @keyframes drift {
+        0% { transform: translate(0px, 0px) rotate(0deg); }
+        50% { transform: translate(50px, 50px) rotate(180deg); }
+        100% { transform: translate(0px, 0px) rotate(360deg); }
+      }
+      .animate-blob {
+        animation: blob 8s infinite alternate cubic-bezier(0.4, 0, 0.2, 1); /* Slightly slower for grander movement */
+      }
+      .animate-drift {
+        animation: drift 20s infinite linear;
+      }
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+      .animation-delay-6000 {
+        animation-delay: 6s;
+      }
+      /* Hide scrollbar for clean aesthetic */
+      body {
+        overflow: hidden; 
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
